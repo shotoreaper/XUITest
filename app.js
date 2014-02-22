@@ -40,9 +40,14 @@ function hola()
                 );*/
     /*page = homePage;
     x$('#page2').html(page);*/
-    /*emile('page2', '-webkit-transform: translate3d(100%, 0, 0);transform: translate3d(100%, 0, 0);position:absolute; border:50px solid #ff0000', {
-    duration: 500
-    });*/
-    x$('#page2').attr('class','page transition right');
+    emile('test2', 'left:300px;padding:10px;border:50px solid #ff0000', {
+    duration: 500,
+    after: function(){
+      emile('test1', 'background:#0f0;left:100px;padding-bottom:100px;opacity:1', { 
+        duration: 4000, easing: bounce
+      });
+    }
+    });
+    //x$('#page2').attr('class','page transition right');
     
 }
